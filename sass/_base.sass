@@ -1,0 +1,42 @@
+html, body
+    @extend .width-100
+    @extend .height-100
+
+html, body, h1, h2, h3, h4, ul
+    @extend %margin-0
+
+body
+    @extend %padding-0
+    border: none
+    line-height: $base-pad
+    background-color: $body-bg
+    word-break: break-word
+    +for-mobile(print)
+        background-color: #fff !important
+
+body, input, textarea, select
+    @extend %base-font
+
+body, a
+    color: $base-font-color
+
+p
+    margin: $base-pad 0
+
+a
+    text-decoration: none
+    outline: none
+
+img
+    border: none
+
+[class^="icon-"]:before, [class*=" icon-"]:before
+    margin: 0
+
+::selection
+    background-color: $dark-color
+    color: $light-color
+
+::-moz-selection
+    background-color: $dark-color
+    color: $light-color

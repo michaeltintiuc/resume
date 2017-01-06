@@ -1,0 +1,85 @@
+=clearfix()
+    &:before, &:after
+        @extend %display-block
+        @extend %overflow-hidden
+        content: "\0020"
+        height: 0
+
+    &:after
+        clear: both
+
+=transition($prop...)
+    transition: $prop
+
+=translate3d($x:0, $y:0, $z:0)
+    transform: translate3d($x, $y, $z)
+
+=rotate3d($deg, $x:0, $y:0, $z:0)
+    transform: rotate3d($x, $y, $z, $deg)
+
+=transform-origin($x, $y)
+    transform-origin: $x $y
+
+=animation($prop...)
+    animation: $prop
+
+=touch-callout($prop)
+    -webkit-touch-callout: $prop
+    -moz-touch-callout: $prop
+    touch-callout: $prop
+
+=user-select($prop)
+    user-select: $prop
+
+=aspect-ratio($value)
+    @media only screen and (min-aspect-ratio: $value)
+        @content
+
+=orientation($type)
+    @media only screen and (orientation: $type)
+        @content
+
+=for-mobile($media)
+    @if $media == base
+        @media only screen and (max-width: $row-width + $base-pad)
+            @content
+
+    @else if $media == print
+        @media print
+            @content
+
+    @else if $media == any
+        @media only screen and (max-width: 960px)
+            @content
+
+    @else if $media == short-phone
+        @media only screen and (max-height: 375px)
+            @content
+
+    @else if $media == phone
+        @media only screen and (max-width: 479px)
+            @content
+
+    @else if $media == narrow-phone
+        @media only screen and (max-width: 320px)
+            @content
+
+    @else if $media == wide-phone
+        @media only screen and (min-width: 480px) and (max-width: 767px)
+            @content
+
+    @else if $media == tablet
+        @media only screen and (min-width: 768px) and (max-width: 1024px)
+            @content
+
+    @else if $media == tablet-portrait
+        @media only screen and (min-width: 768px) and (orientation: portrait)
+            @content
+
+    @else if $media == tablet-landscape
+        @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)
+            @content
+
+    @else if $media == netbook
+        @media only screen and (min-width: 1025px) and (max-width: 1280px)
+            @content

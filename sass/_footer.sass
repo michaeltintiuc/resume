@@ -1,0 +1,24 @@
+footer
+    padding: $base-pad 0
+    border-bottom: $base-pad solid $body-bg
+    background: $accent-color
+    +clearfix()
+    +for-mobile(phone)
+        border-bottom: 0
+
+    +for-mobile(print)
+        border-bottom: 0 !important
+        text-align: center !important
+
+    a
+        color: $light-color
+
+#source
+    float: right
+    +for-mobile(print)
+        float: none !important
+
+#pdf
+    float: left
+    +for-mobile(print)
+        display: none !important

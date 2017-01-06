@@ -1,0 +1,25 @@
+main
+    background: $main-bg
+    padding: $base-pad 0
+    +for-mobile(print)
+        background-color: #fff !important
+
+    section
+        padding: $base-pad 0
+
+        p
+            padding: 0 $base-pad/2
+
+            &:last-child
+                margin-bottom: 0
+
+        a
+            color: $accent-color
+
+    h1
+        text-transform: capitalize
+        color: $accent-color
+        font-size: 16pt
+        font-weight: normal
+        border-bottom: 1px solid $grey
+        padding-bottom: $base-pad
