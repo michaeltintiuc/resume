@@ -25,7 +25,9 @@
             <i class="icon-location"></i>
         </p>
         <p>
-            <a href="tel:<?= cv()->phone ?>" title="Call +(373) 688 99 004"><?= cv()->phone ?></a>
+            <a href="tel:<?= str_replace([' ', '(', ')'], '', cv()->phone) ?>" title="Call <?= cv()->phone ?>">
+                <?= cv()->phone ?>
+            </a>
             <i class="icon-phone"></i>
         </p>
     </div>
