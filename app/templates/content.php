@@ -36,8 +36,10 @@
         <h1>Projects</h1>
         <?php foreach (cv()->projects as $project): ?>
             <div class="project-wrapper">
-                <span class="project-name"><?= $project['title'] ?></span>
-                <a class="project-link" href="<?= $project['url'] ?>" target="_blank"><?= $project['url'] ?></a>
+                <div class="project-meta">
+                    <span class="project-name"><?= $project['title'] ?></span>
+                    <a class="project-link" href="<?= $project['url'] ?>" target="_blank"><?= $project['url'] ?></a>
+                </div>
                 <p><?= nl2br($project['desc']) ?></p>
             </div>
         <?php endforeach ?>
