@@ -1,5 +1,4 @@
 <header class="content">
-
     <div class="width-50 width-mobile-phone-100 cell nopad relative">
         <div id="avatar-wrapper">
             <picture>
@@ -24,6 +23,7 @@
             <a href="https://goo.gl/maps/unB85JnKjCu" title="Chisinau, Moldova in Google Maps" target="_blank"><?= cv()->location ?></a>
             <i class="icon-location"></i>
         </p>
+        
         <p>
             <a href="tel:<?= str_replace([' ', '(', ')'], '', cv()->phone) ?>" title="Call <?= cv()->phone ?>">
                 <?= cv()->phone ?>
