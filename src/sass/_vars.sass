@@ -1,8 +1,10 @@
+@use "sass:color"
+
 $row-width: 1000px
 $base-pad: 20px
 
 $main-bg: #fafafa
-$body-bg: darken($main-bg, 10%)
+$body-bg: color.adjust($main-bg, $lightness: -10%)
 $accent-color: #2979FF
 $dark-color: #424242
 $light-color: #fafafa
