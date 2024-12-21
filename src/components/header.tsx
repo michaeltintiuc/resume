@@ -1,7 +1,7 @@
 "use client";
 
-import { resume } from "../resume";
 import { Icon } from "@iconify-icon/react";
+import { resume } from "../resume";
 
 export function Header() {
   const { name, images, links, profession, location, phone } = resume;

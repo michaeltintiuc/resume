@@ -1,3 +1,4 @@
+import Markdown from "react-markdown";
 import { resume } from "../../resume";
 import { Skills } from "./skills";
 import { Work } from "./work";
@@ -10,7 +11,7 @@ export function Content() {
     <main className="content">
       <section>
         <h1>Career Summary</h1>
-        <p>{summary}</p>
+        <Markdown>{summary}</Markdown>
       </section>
 
       <Skills />
