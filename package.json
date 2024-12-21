@@ -1,12 +1,31 @@
 {
+  "name": "resume",
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaeltintiuc/resume"
+  },
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.1.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
   "devDependencies": {
-    "gulp": "~3.8.8",
-    "gulp-add-src": "~0.1.1",
-    "gulp-autoprefixer": "~1.0.0",
-    "gulp-concat": "~2.4.0",
-    "gulp-minify-css": "~0.3.8",
-    "gulp-sass": "^2.3.2",
-    "gulp-uglify": "~1.0.1",
-    "gulp-util": "~3.0.1"
+    "@eslint/eslintrc": "^3",
+    "@iconify-icon/react": "^2.2.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.2",
+    "sass": "^1.83.0",
+    "typescript": "^5"
   }
 }
