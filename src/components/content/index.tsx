@@ -10,7 +10,7 @@ export function Content() {
   return (
     <main className="content">
       <section>
-        <h1>Career Summary</h1>
+        <h1>Introduction</h1>
         <Markdown>{summary}</Markdown>
       </section>
 
@@ -18,10 +18,10 @@ export function Content() {
       <Work />
       <Projects />
 
-      {sections.map(({ title, desc }) => (
-        <section key={title}>
+      {sections.map(({ title, desc }, i) => (
+        <section key={`section-${i}`}>
           <h1>{title}</h1>
-          <p>{desc}</p>
+          <Markdown>{desc}</Markdown>
         </section>
       ))}
     </main>
