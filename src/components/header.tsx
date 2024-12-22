@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Icon } from "@iconify-icon/react";
 import { resume } from "../resume";
 
@@ -10,13 +11,7 @@ export function Header() {
     <header className="content">
       <div className="width-50 width-mobile-phone-100 cell nopad relative">
         <div id="avatar-wrapper">
-          <picture>
-            <source
-              media="(max-width: 480px)"
-              srcSet={`${images.medium}, ${images.large} 2x`}
-            />
-            <img src={images.small} alt={name} width="164" height="164" />
-          </picture>
+          <Image src={images.large} width={328} height={328} alt="avatar" />
         </div>
 
         <div id="links">
