@@ -1,3 +1,4 @@
+import Markdown from "react-markdown";
 import { resume } from "../../resume";
 
 export function Skills() {
@@ -12,7 +13,7 @@ export function Skills() {
           <div className="skill-value-wrapper" title={`${value}%`}>
             <div className="skill-value" style={{ width: `${value}%` }}></div>
           </div>
-          <p>{desc}</p>
+          <Markdown>{desc}</Markdown>
         </div>
       ))}
     </section>
